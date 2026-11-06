@@ -295,6 +295,7 @@ module mpas_soundings
                     write(stid,'(a)') trim(stationNames(iStn))
 
                     write(sndUnit,'(a)') '  SNPARM = PRES;HGHT;TMPC;DWPC;DRCT;SPED;W;QC;QR;QI;QS;QG;RAINNCV;SNOWNCV;GRAUPELNCV;RAINNC;SNOWNC;GRAUPELNC'
+                    write(sndUnit,'(a)') '   UNITS = hPa;m;degC;degC;angle;ms-1;ms-1;unitless;unitless;unitless;unitless;unitless;mm;mm;mm;mm;mm;mm'
                     write(sndUnit,'(a)') ''
                     write(sndUnit,'(a,i2.2,i2.2,i2.2,a,i2.2,i2.2)') ' STID = '//stid//'  STNM = 99999       TIME = ', mod(yyyy,100), mm, dd,'/', h, m
                     write(sndUnit,'(a,f6.2,a,f7.2,a)') ' SLAT = ', stationLats(iStn), '      SLON = ', stationLons(iStn), '     SELV =    -999'
