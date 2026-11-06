@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<registry model="mpas" core="init_atmosphere" core_abbrev="init_atm" version="8.4.1-noaa">
+<registry model="mpas" core="init_atmosphere" core_abbrev="init_atm" version="8.4.2-noaa">
 
 <!-- **************************************************************************************** -->
 <!-- ************************************** Dimensions ************************************** -->
@@ -267,6 +267,11 @@
                      units="-"
                      description="Whether to smooth zeta surfaces"
                      possible_values="true or false"/>
+
+                <nml_option name="config_coordinate_smoothing_height" type="real" default_value="0.0"
+                     units="m"
+                     description="Height scale for real-data coordinate-surface smoothing, independent of the hybrid transition height. Zero uses the hybrid transition height, or model top when hybrid coordinates are disabled. Smaller positive values increase smoothing up to the existing coefficient cap."
+                     possible_values="Non-negative real values; zero uses zh or zt"/>
 
                 <nml_option name="config_dzmin"                 type="real"          default_value="0.3"
                      units="-"
